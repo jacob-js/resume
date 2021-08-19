@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HomePage } from "../Containers/Home";
 import Nav from "../Containers/Nav";
 import { routes } from "./routes";
 
@@ -6,15 +7,15 @@ function Routes(){
 
     return(
         <Router>
-            <Switch>
-                <Nav>
+            <Nav>
+                <Switch>
                     {
                         routes.map(route =>(
                             <Route path={route.path} key={route.name} exact render={() => <route.component />} />
                         ) )
                     }
-                </Nav>
-            </Switch>
+                </Switch>
+            </Nav>
         </Router>
     );
 };

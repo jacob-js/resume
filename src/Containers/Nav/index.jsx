@@ -1,7 +1,7 @@
 import './style.scss';
 
 
-function Nav({Children}){
+function Nav({children}){
 
     return(
         <div className="page">
@@ -14,7 +14,7 @@ function Nav({Children}){
                     <div className="nav-item">Contact</div>
                 </div>
             </div>
-            <div className="children"> {Children} </div>
+            <div className="children"> {children} </div>
         </div>
     )
 };
