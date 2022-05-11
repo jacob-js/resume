@@ -1,6 +1,3 @@
-import './style.scss';
-
-
 function Nav({children}){
 
     return(
@@ -8,10 +5,10 @@ function Nav({children}){
             <div className='nav'>
                 <div className="nav-part-1">Home</div>
                 <div className="nav-part-2">
-                    <div className="nav-item">Works</div>
-                    <div className="nav-item">Services</div>
-                    <div className="nav-item">Education</div>
-                    <div className="nav-item">Contact</div>
+                    <a className="nav-item" href="#about">About</a>
+                    <a className="nav-item" href="#skills">Skills</a>
+                    <a className="nav-item" href="#portfolio">Portfolio</a>
+                    <button className="nav-item contact">Contact me</button>
                 </div>
             </div>
             <div className="children"> {children} </div>
