@@ -23,7 +23,10 @@ const tools = [
 function Skills() {
   return (
     <div className='skills' id='skills'>
-        <div className="title">The tools I use <div className='line'></div></div>
+        <div className="header">
+            <div className="divider">The tools I use <div className='line'></div></div>
+            <div className="title">My skills</div>
+        </div>
         <div className="tools">
             {
                 tools.map((tool, index) =>(

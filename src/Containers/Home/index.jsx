@@ -4,6 +4,7 @@ import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import TypewriterComponent from 'typewriter-effect';
 import About from '../../Components/About';
 import Skills from '../../Components/Skills';
+import Portfolio from '../../Components/Portfolio';
 
 export function HomePage(){
 
@@ -19,7 +20,7 @@ export function HomePage(){
                             options={{
                                 strings: "Hi there👋, I'm",
                                 autoStart: true,
-                                loop: true,
+                                loop: false,
                                 pauseFor: 3000
                             }}
                         />
@@ -34,6 +35,7 @@ export function HomePage(){
            </div>
            <About />
            <Skills />
+           <Portfolio />
         </div>
     )
 }
