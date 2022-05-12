@@ -5,7 +5,7 @@ import img from '../Assets/imgs/jac_about.jpg';
 
 export default function About() {
   return (
-    <div className='about' id='about' data-aos='fade-up'>
+    <div className='about' id='about'>
         <div className="card" data-aos='fade-left'>
             <img src={img} alt="" />
         </div>

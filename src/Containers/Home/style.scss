@@ -1,12 +1,25 @@
 .home-page
 {
+    position: relative;
+}
+.content
+{
+    z-index: 1;
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    align-items: center;
+    position: relative;
+    top: -80px;
+    left: 0;
     background-image: url('../imgs/bg.jpg');
     background-size: cover;
     height: 500px;
     width: 100%;
-    padding: 50px;
+    padding: 0 40px;
+    padding-top: 60px;
 }
-.home-page::after
+.content::before
 {
     content: '';
     width: 100%;
@@ -16,16 +29,6 @@
     overflow-x: hidden;
     left: 0;
     top: 0;
-}
-.content
-{
-    z-index: 1;
-    display: flex;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    padding: 80 0px;
-    align-items: center;
-    position: relative;
 }
 .div-intro
 {
@@ -79,6 +82,10 @@
         background-color: $default_color;
         margin-left: 10px;
         margin-top: 3px;
+        &.l{
+            margin-left: 0px;
+            margin-right: 10px;
+        }
     }
 }
 .title{
@@ -92,18 +99,11 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-    .divider{
-        min-width: 200px;
-    }
-    .title{
-        min-width: 200px;
-        text-align: justify;
-        font-stretch: expanded;
-    }
 }
 
 .about{
-    padding: 100px 50px;
+    padding: 20px 50px;
+    margin-top: -60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -162,7 +162,6 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        // background-color: rgb(228, 228, 228);
         border-radius: 20px;
         margin: -20px;
         .tool{
@@ -174,7 +173,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            // background-color: white;
             background-color: rgb(228, 228, 228);
             border-radius: 5px;
             img{
@@ -240,4 +238,50 @@
     font-weight: bold;
     text-transform: capitalize;
     line-height: 20px;
+}
+
+.contact{
+    padding: 50px 50px;
+    .title{
+        margin-bottom: 5px;
+    }
+    .body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+}
+.contact .body .details{
+    width: 40%;
+}
+.details .detail{
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
+.detail .icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: rgb(228, 228, 228);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.detail .text{
+    color: gray;
+}
+
+.contact .body .form{
+    width: 57%;
+}
+.form .flex-fields{
+    display: flex;
+    justify-content: space-between;
+    input{ width: 49%; }
 }

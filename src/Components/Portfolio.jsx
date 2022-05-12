@@ -14,7 +14,10 @@ function Portfolio() {
   return (
     <div className='portfolio' id='portfolio'>
         <div className="header">
-            <div className="divider"> What I've realized <div className="line"></div></div>
+            <div className="divider">
+                <div className="line l"></div>
+                What I've realized <div className="line"></div>
+            </div>
             <div className="title">My porfolio</div>
         </div>
         <div className="projects">

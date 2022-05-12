@@ -10,7 +10,17 @@
     font-family: 'Poppins', sans-serif;
     color: white;
     position: absolute;
+    top: 0;
     z-index: 999;
+    transition: all .5s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.nav.fixed{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    box-shadow: 0 0 20px $light_color;
+    .nav-item{ color: gray; }
 }
 .nav-part-2
 {
@@ -25,14 +35,26 @@
     &:hover{
         color: rgb(237, 237, 237);
     }
+    &.active{
+        color: $default_color !important;
+    }
 }
 button.nav-item.contact{
     background-color: $default_color;
-    color: white;
+    color: white !important;
     font-weight: bold;
+    font-size: 14px;
     border-radius: 30px;
     border: none;
     outline: none;
     padding: 10px 30px;
     cursor: pointer;
+}
+.footer{
+    width: 100%;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $light_color;
 }
