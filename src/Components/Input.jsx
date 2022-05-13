@@ -10,7 +10,7 @@ const Input = styled.input`
 
     &:focus {
         outline: none;
-        border: 1px solid #00a8ff;
+        border: 1px solid rgba(185,111,4,255);
     }
 `;
 
@@ -24,7 +24,7 @@ export const TextArea = styled.textarea`
 
     &:focus {
         outline: none;
-        border: 1px solid #00a8ff;
+        border: 1px solid rgba(185,111,4,255);
     }
 `;
 

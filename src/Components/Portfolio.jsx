@@ -23,7 +23,7 @@ function Portfolio() {
         <div className="projects">
             {
                 [1,2,3,4,5,6].map((project, index) => (
-                    <div className="project" key={index} data-aos="fade-down">
+                    <div className="project" key={index} data-aos="fade-up">
                         <img src={projects[0].image} alt="" />
                         <div className="bg"></div>
                         <div className="info">

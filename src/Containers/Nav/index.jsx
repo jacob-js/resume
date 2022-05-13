@@ -1,8 +1,10 @@
+import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import { useRef, useState, useEffect } from "react";
 import Footer from "./Footer";
 
 function Nav({children}){
     const navRef = useRef();
+    const menu = useRef();
     const [active, setActive] = useState('#home');
 
     window.addEventListener('scroll', () => {
@@ -24,14 +26,19 @@ function Nav({children}){
     return(
         <div className="page">
             <div className='nav' ref={navRef}>
-                <a 
-                    className={`nav-part-1 nav-item ${active == '#home' ? 'active': ''}`}
-                    href="/#home"
-                    onClick={() => setActive('#home')}
-                >
-                    Home
-                </a>
-                <div className="nav-part-2">
+                <div className="nav-part-1">
+                    <a 
+                        className={`nav-item ${active == '#home' ? 'active': ''}`}
+                        href="/#home"
+                        onClick={() => setActive('#home')}
+                    >
+                        Home
+                    </a>
+                    <div className="menu" onClick={() =>menu.current.classList.add('active')}>
+                        <MenuOutlined />
+                    </div>
+                </div>
+                <div className="nav-part-2" ref={menu}>
                     <a
                         className={`nav-item ${active === '#about' ? 'active': ''}`}
                         href="#about"
@@ -51,9 +58,12 @@ function Nav({children}){
                     >
                         Portfolio
                     </a>
-                    <a href="#contact" onClick={() =>setActive('#contact')}>
-                        <button className="nav-item contact">Contact me</button>
-                    </a>
+                    <div className="last-item">
+                        <a href="#contact" onClick={() =>setActive('#contact')}>
+                            <button className="nav-item contact">Contact me</button>
+                        </a>
+                        <div className="close-menu" onClick={() =>menu.current.classList.remove('active')}><CloseOutlined /></div>
+                    </div>
                 </div>
             </div>
             <div className="children">

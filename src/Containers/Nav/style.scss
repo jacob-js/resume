@@ -13,14 +13,14 @@
     top: 0;
     z-index: 999;
     transition: all .5s ease;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(151, 151, 151, 0.2);
 }
 .nav.fixed{
     position: fixed;
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
-    box-shadow: 0 0 20px $light_color;
-    .nav-item{ color: gray; }
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    .nav-item{ color: black; }
 }
 .nav-part-2
 {

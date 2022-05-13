@@ -13,7 +13,9 @@ html {
 }
 
 @import './Containers/Home/style.scss';
+@import './Containers/Home/style.mob.scss';
 @import './Containers/Nav/style.scss';
+@import './Containers/Nav/style.mob.scss';
 
 @import 'aos/dist/aos.css';
 @import 'antd/dist/antd.css';
